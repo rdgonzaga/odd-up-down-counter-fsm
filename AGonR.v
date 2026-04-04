@@ -16,8 +16,8 @@ module odd_up_down_counter (
         $display("Behavioral odd up-down Binary counter using D Flip Flop");
     end
 
-    always @(posedge clock or negedge reset) begin
-        if (!reset) begin
+    always @(posedge clock, negedge reset) begin
+        if (reset == 1'b0) begin
             count <= 4'b0001; 
         end else begin
             case (count)
