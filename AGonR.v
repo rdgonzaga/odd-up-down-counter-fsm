@@ -1,12 +1,7 @@
 // Rainer D. Gonzaga S08
 `timescale 1ns / 1ps
 
-module odd_up_down_counter (
-    Y,
-    reset,
-    clock,
-    count
-);
+module odd_up_down_counter (Y, reset, clock, count);
 
     input Y, reset, clock;
     output reg [3:0] count;

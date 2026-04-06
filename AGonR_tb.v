@@ -24,16 +24,16 @@ module odd_up_down_counter_tb;
     initial
     begin
         Y = 1'b0;
-        #100 Y = 1'b1;
+        #180 Y = 1'b1;
     end
 
     initial
     begin
         $display("Rainer D. Gonzaga, Behavioral odd up-down Binary counter using D Flip Flop");
-        $monitor("time=%03d, clk=%b, reset=%b, Y=%b, count=%b", $time, clock, reset, Y, count);
+        $monitor("time = %3d | clk = %b | rst = %b | Y = %b | count = %b", $time, clock, reset, Y, count);
         $dumpfile("AGonR.vcd");
         $dumpvars(0, odd_up_down_counter_tb);
     end
 
-    initial #210 $finish;
+    initial #380 $finish;
 endmodule
