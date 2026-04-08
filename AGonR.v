@@ -6,11 +6,6 @@ module odd_up_down_counter (Y, reset, clock, count);
     input Y, reset, clock;
     output reg [3:0] count;
 
-    initial begin
-        $display("Rainer D. Gonzaga");
-        $display("Behavioral odd up-down Binary counter using D Flip Flop");
-    end
-
     always @(posedge clock, negedge reset) begin
         if (reset == 1'b0) begin
             count <= 4'b0001; 
